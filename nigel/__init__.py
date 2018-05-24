@@ -39,10 +39,13 @@ def cli(directory, title, date, tag):
 
     base_content = f'Title: {title}\nDate: {date}\nSlug: {slug}\nTags: {tags}\n\n'
 
-    filepath = os.path.join(directory, f'{short_date}-{slug}.markdown')
+    if directory:
+        filepath = os.path.join(directory, f'{short_date}-{slug}.markdown')
 
-    with open(filepath, 'w') as initial:
-        initial.write(base_content)
+        with open(filepath, 'w') as initial:
+            initial.write(base_content)
 
-    click.edit(filename=filepath)
+        click.edit(filename=filepath)
+    else:
+        click.echo(base_content)
 
