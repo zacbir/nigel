@@ -1,5 +1,6 @@
 [project]
 name = "nigel"
+version = "2026.06.08"
 description = "Command line tool for creating Pelican posts"
 readme = "README.md"
 license-files = ["LICENSE"]
@@ -15,7 +16,6 @@ classifiers = [
     "Topic :: Utilities",
     "Programming Language :: Python :: 3.12",
 ]
-dynamic = ["version"]
 requires-python = ">= 3.12"
 dependencies = [
     "typer",
