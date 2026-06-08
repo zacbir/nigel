@@ -1,0 +1,34 @@
+[project]
+name = "nigel"
+description = "Command line tool for creating Pelican posts"
+readme = "README.md"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Zachery Bir", email = "zbir@zacbir.net"},
+]
+maintainers = [
+    {name = "Zachery Bir", email = "zbir@zacbir.net"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Writers",
+    "Topic :: Utilities",
+    "Programming Language :: Python :: 3.12",
+]
+dynamic = ["version"]
+requires-python = ">= 3.12"
+dependencies = [
+    "typer",
+]
+
+[project.urls]
+Homepage = "https://github.com/zacbir/nigel"
+Repository = "https://github.com/zacbir/nigel.git"
+Issues = "https://github.com/zacbir/nigel/issues"
+
+[build-system]
+requires = ["uv_build >= 0.11.7, <0.12.0"]
+build-backend = "uv_build"
+
+[project.scripts]
+nigel = "nigel.cli:app"
